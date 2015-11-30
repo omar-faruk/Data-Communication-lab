@@ -16,5 +16,5 @@ plot(t,x,'r',t,decodedx,'k--')
 legend('original','recovered')
 grid on
 distor=sum((x-decodedx).^2)/length(x) %mean square error
-xlebel('time')
-ylebel('original and recovered signal');
+xlabel('time')
+ylabel('original and recovered signal');
