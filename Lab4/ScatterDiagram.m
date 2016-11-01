@@ -1,0 +1,14 @@
+M=16;
+Fd=1;
+Fs=10;
+D=2000;
+msg=randint(D,1,M);
+msg_m=qammod(msg,M);
+N=Fs/Fd;
+W=0.40;
+period=1/Fd;
+delay=3;
+offset=0;
+rec=rcosflt(msg_m,Fd,Fs,'fir/normal',W,delay);
+h1=eyediagram(rec,N,period,offset); % eye diagram
+h2=scatterplot(rec,N,offset,'r*'); %scatter diagram
