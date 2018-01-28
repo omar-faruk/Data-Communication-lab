@@ -1,0 +1,10 @@
+%home task
+
+t=1:0.0005:3*pi;
+x=cos(2*pi*t);
+N=31;
+Wn=0.5;
+b=firl(N,Wn);
+n=0.15*random(1,length(t));
+d=filter(b,1,x);
+mu=0.009
